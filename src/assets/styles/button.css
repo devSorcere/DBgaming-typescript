@@ -1,0 +1,19 @@
+.button:hover {
+    border-radius: 7px 15px;
+
+}
+
+.button {
+    transition: color .5s, background-color .5s, border-radius .5s;
+}
+
+.button .up {
+    width: 0px;
+    height: 0px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.button:hover .down {
+    width: 60%;
+    height: 70%;
+}

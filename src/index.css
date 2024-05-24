@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-dots li button::before {
+    font-size: 0 !important;
+}
+
+.slick-dots li  {
+    background: #c9c9c9 !important;
+    border-radius: 10px !important;
+    height: 8px !important;
+    margin: 0 8px !important;
+    opacity: 1 !important;
+    width: 25px !important;
+    margin: 0 10px !important;
+}
+
+.slick-dots li.slick-active  {
+    background: url(./assets/images/dot-active.png) no-repeat 50% / cover !important;
+    border-radius: 10px !important;
+    height: 8px !important;
+    width: 37px !important;
+    margin: 0 10px !important;
+}

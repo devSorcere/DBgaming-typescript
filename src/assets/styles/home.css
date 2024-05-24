@@ -1,0 +1,71 @@
+.line>span {
+    /* display: block; */
+    display: inline-block;
+    height: 7.5px;
+    margin-right: 8px;
+    transform: skewX(-45deg);
+    width: 26px;
+}
+
+
+.animation {
+    animation: moveUp 0.5s ease 0.5s 1 forwards;
+}
+
+.animation-other {
+    animation: moveUp 0.5s ease 0.5s 1 forwards;
+}
+
+
+
+
+.img-animation {
+    animation: moveDown 0.5s ease 0.5s 1;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.media-hidden {
+    display: block;
+}
+
+.pro-line {
+    background: #ff7e04;
+    height: 1px;
+    margin: 8px auto 15px;
+    width: 15%;
+}
+
+@media screen and (max-width: 1350px) {
+    .media-hidden {
+        display: none;
+    }
+
+    .media-p-x-10 {
+        padding: 0px 10px;
+    }
+}

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Microsoft YaHei';
+    src: local('Microsoft YaHei'), local('微软雅黑');
+  }
+  
+  @font-face {
+    font-family: 'Heiti';
+    src: local('Heiti SC'), local('黑体');
+  }
+  
+  @font-face {
+    font-family: 'SimSun';
+    src: local('SimSun'), local('宋体');
+  }
+  
+  body {
+    font-family: 'Microsoft YaHei', 'Heiti', 'SimSun', sans-serif;
+  }
