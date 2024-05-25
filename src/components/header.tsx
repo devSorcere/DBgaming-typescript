@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import { Dropdown, Space, } from "antd";
 import { CaretDownOutlined } from "@ant-design/icons";
 import "../assets/styles/header.css";
 import LanguageSwitcher from "./languageSwitcher";
 import Ham from '../assets/images/images.png'
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const items = [
     {
       label: (
@@ -36,8 +38,23 @@ const Header = () => {
       key: "2",
     },
   ];
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="fixed z-[10000] w-[100%] flex flex-col items-center shadow bg-white">
+    <div className={`fixed z-[100] w-[100%]  transition-all duration-300 flex flex-col items-center shadow ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
       <div className="lg:w-[1467px] w-full">
         <header className="container hidden mx-auto lg:block">
           <nav

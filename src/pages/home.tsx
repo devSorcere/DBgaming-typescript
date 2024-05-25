@@ -240,8 +240,8 @@ const Home = () => {
     <div className="w-full">
       <section className="top">
         <video
-          className=""
-          src={topVideo}
+          className="min-h-[512px] object-cover"
+          src={"https://dbgaming.com/video/DBGAMING.mp4"}
           muted
           autoPlay
           loop
@@ -313,7 +313,7 @@ const Home = () => {
           <div className={item.id === selectItem ? "block" : "hidden"}>
             <div className="">
               <video
-                className="w-[auto] md:min-h-[1100px] lg:min-h-[800px] min-h-[1300px]"
+                className="object-cover md:min-h-[1100px] lg:min-h-[800px] min-h-[1300px]"
                 src={item.video}
                 muted
                 autoPlay
@@ -596,63 +596,6 @@ const Home = () => {
             </div>
           </div>
         </Slider>
-      </section>
-      <section className="px-10 text-center realtive bg-[#000000] py-[30px]">
-        <SectionHeader title="Contact Us" className="text-white mb-[30px]" />
-        <div className="grid grid-cols-12 lg:gap-[40px] gap-0 ">
-          <div className="col-span-12 lg:col-span-5 ">
-            <div className="grid grid-cols-12 bg-[#262525] my-5 rounded-bl-[6px] rounded-br-[6px] border-b-[3px] border-[#fc8615] p-[30px]">
-              <div className="col-span-5">
-                <img src={Telegram} alt="" />
-              </div>
-              <div className="flex flex-col items-center justify-center col-span-7">
-                <div className="mb-2 text-white">Telegram</div>
-                <div className="mt-1">@dbgame</div>
-              </div>
-            </div>
-            <div className="grid grid-cols-12 bg-[#262525] my-5 rounded-bl-[6px] rounded-br-[6px] border-b-[3px] border-[#fc8615] p-[30px]">
-              <div className="col-span-5">
-                <img src={Telegram} alt="" />
-              </div>
-              <div className="flex flex-col items-center justify-center col-span-7">
-                <div className="mb-2 text-white">Telegram</div>
-                <div className="mt-1">@dbgame</div>
-              </div>
-            </div>
-            <div className="grid grid-cols-12 bg-[#262525] my-5 rounded-bl-[6px] rounded-br-[6px] border-b-[3px] border-[#fc8615] p-[30px]">
-              <div className="col-span-5">
-                <img src={Telegram} alt="" />
-              </div>
-              <div className="flex flex-col items-center justify-center col-span-7">
-                <div className="mb-2 text-white">Telegram</div>
-                <div className="mt-1">@dbgame</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-12  lg:col-span-7 bg-[#262525]   p-[25px] my-5">
-            <div className="grid grid-cols-12 gap-[20px]">
-              <div className="col-span-6 ">
-                <div className="text-left text-white label py-[10px]">Name *</div>
-                <input className="bg-[#1c1c1c] h-[40px] w-full outline-none text-white" />
-              </div>
-              <div className="col-span-6">
-                <div className="text-left text-white label py-[10px]">Phone *</div>
-                <input className="bg-[#1c1c1c] h-[40px] w-full outline-none text-white" />
-              </div>
-              <div className="col-span-12">
-                <div className="text-left text-white label py-[10px]">Email Address *</div>
-                <input className="bg-[#1c1c1c] h-[40px] w-full outline-none text-white" />
-              </div>
-              <div className="col-span-12">
-                <div className="text-left text-white label py-[10px]">Please input your request or question here *</div>
-                <textarea cols={20} rows={5} className="p-[10px] bg-[#1c1c1c] w-full overflow-hidden  outline-none text-white" />
-              </div>
-              <div className="flex items-center col-span-12">
-                <Button text="Submit" />
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </div >
   );

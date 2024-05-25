@@ -8,11 +8,6 @@ const LanguageSwitcher: React.FC = () => {
     const countries = [
         { code: "cn", name: "繁體中文" },
         { code: "us", name: "English" },
-        { code: "in", name: "Tiếng Việt" },
-        { code: "fr", name: "ไทย" },
-        { code: "es", name: "Español" },
-        { code: "pt", name: "Português" },
-        { code: "ru", name: "Русский" },
     ];
     const country_item = countries.map((item) => {
         return {
