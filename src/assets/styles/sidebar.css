@@ -1,0 +1,16 @@
+.sidebar {
+    background: linear-gradient(180deg, #ec5c2a, #d94803);
+    border-radius: 32.5px;
+    height: 351px;
+    width: 66px;
+    z-index: 2;
+}
+
+.phone-box {
+    transition: all ease 0.4s;
+}
+
+.icon-hover:hover .phone-box {
+    transform: translateX(0%);
+    transition: all ease 0.4s;
+}

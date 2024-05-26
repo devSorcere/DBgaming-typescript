@@ -3,7 +3,6 @@ import { Dropdown, Space, } from "antd";
 import { CaretDownOutlined } from "@ant-design/icons";
 import "../assets/styles/header.css";
 import LanguageSwitcher from "./languageSwitcher";
-import Ham from '../assets/images/images.png'
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const items = [
@@ -125,7 +124,6 @@ const Header = () => {
             <div>
               <ul className="flex flex-row items-center nav">
                 <LanguageSwitcher />
-                <li><img width={"auto"} className="h-[40px]" src={Ham} alt="" /></li>
               </ul>
             </div>
           </nav>
