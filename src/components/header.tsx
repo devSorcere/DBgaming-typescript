@@ -39,7 +39,8 @@ const Header = () => {
   ];
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      console.log(window.scrollY)
+      if (window.scrollY > 150) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -53,7 +54,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <div className={`fixed z-[100] w-[100%]  transition-all duration-300 flex flex-col items-center shadow ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
+    <div className={`fixed z-[100] w-[100%]  transition-all duration-300 flex flex-col items-center shadow ${isScrolled ? 'bg-white text-[]' : 'bg-transparent text-white'}`}>
       <div className="lg:w-[1467px] w-full">
         <header className="container hidden mx-auto lg:block">
           <nav
@@ -104,7 +105,7 @@ const Header = () => {
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Careers</li>
-                <LanguageSwitcher />
+                <LanguageSwitcher isScrolled={isScrolled} />
               </ul>
             </div>
           </nav>
@@ -123,7 +124,7 @@ const Header = () => {
             </div>
             <div>
               <ul className="flex flex-row items-center nav">
-                <LanguageSwitcher />
+                <LanguageSwitcher isScrolled={isScrolled} />
               </ul>
             </div>
           </nav>

@@ -9,7 +9,7 @@ function App() {
       <SideBar />
       <div className="w-[100%]  flex flex-col items-center">
         <div className=" w-[100%]  px-0">
-          <div className="w-[100%] mt-[75px]"></div>
+          <div className="w-[100%]"></div>
           <Home />
         </div>
       </div>

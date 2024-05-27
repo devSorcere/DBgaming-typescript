@@ -83,6 +83,7 @@ import Starry from '../assets/images/industry/upload_148470d5f8366bde67c29216bed
 import Event from '../assets/images/industry/upload_093093ce898a585f81d8003aebf28465.jpg'
 import Presidential from '../assets/images/industry/upload_d86c292acda72e68bff71eaf3d5ef4aa.jpg'
 
+import MainBanner from '../assets/images/yingwen.png'
 const Home = () => {
   const { t } = useTranslation();
   const [selectItem, setSelectItem] = useState("SPORTS");
@@ -448,13 +449,16 @@ const Home = () => {
   ]
   return (
     <div className="w-full">
-      <section className="top">
+      <section className="relative">
+        <img src={MainBanner} alt="" className="absolute translate-x-[-50%] top-[50%] left-[50%] w-[774px] z-[1000000]"  />
         <video
           className="min-h-[100vh] object-cover"
           src={"https://dbgaming.com/video/DBGAMING.mp4"}
           muted
-          autoPlay
-          loop
+
+          // autoPlay
+          controls
+        // loop
         >
           <div className="overlay absolute top-0 left-0 w-[100%] h-[100%]"></div>
           <img src="https://dbgaming.com/img/sports111.png" alt="" />
@@ -527,7 +531,7 @@ const Home = () => {
                 className="object-cover md:min-h-[1100px] lg:min-h-[800px] min-h-[1300px]"
                 src={item.video}
                 muted
-                autoPlay
+                // autoPlay
                 loop
               >
                 <img src="https://dbgaming.com/img/sports111.png" alt="" />

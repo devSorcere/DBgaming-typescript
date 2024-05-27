@@ -23,3 +23,6 @@
     width: 37px !important;
     margin: 0 10px !important;
 }
+.ant-select-selector{
+    background-color: transparent !important;
+}

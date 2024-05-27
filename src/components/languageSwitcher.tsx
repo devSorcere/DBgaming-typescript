@@ -1,10 +1,13 @@
-// src/components/LanguageSwitcher.tsx
+
 import { Select } from 'antd';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Flag from "react-world-flags";
 
-const LanguageSwitcher: React.FC = () => {
+interface Props {
+    isScrolled: boolean
+}
+const LanguageSwitcher: React.FC<Props> = ({ isScrolled }) => {
     const countries = [
         { code: "cn", name: "繁體中文" },
         { code: "us", name: "English" },
@@ -32,9 +35,9 @@ const LanguageSwitcher: React.FC = () => {
     return (
         <Select
             dropdownAlign={{ offset: [0, 30] }}
-            className="border-none"
+            className={`border-none`}
             defaultValue="us"
-            style={{ width: "auto" }}
+            style={{ width: "auto", background: isScrolled ? "white" : "transparent", color: isScrolled ? "#777" : "white" }}
             onChange={handleChange}
             options={country_item}
         />
